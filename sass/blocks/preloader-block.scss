@@ -1,0 +1,41 @@
+.page-preloader {
+  position: fixed;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $basic-white;
+  z-index: 100;
+  overflow: hidden;
+}
+.page-preloader-img-wrapper {
+  width: 250px;
+  margin: 0 auto;
+  text-align: center;
+  transform: translateY(50%);
+}
+.page-preloader-img-wrapper svg {
+  fill: transparent;
+  stroke: $basic-hover;
+  stroke-width: 3px;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation-name: strokeFill, colorChange;
+  animation-duration: 10s, 5s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+  animation-delay: 0s, 3s;
+}
+@keyframes strokeFill {
+  from {stroke-dashoffset: 1000}
+  to {stroke-dashoffset: 0}
+}
+@keyframes colorChange {
+  0% {fill:$basic-white}
+  10% {fill: #352c26}
+  30% {fill: #6b553a}
+  80% {fill: #b38d53}
+  100% {fill: $basic-gold}
+}

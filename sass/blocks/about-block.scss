@@ -1,0 +1,70 @@
+.about__header {
+  margin: 0 auto;
+  font-size: 30px;
+  color: $basic-black;
+  text-align: center;
+
+  @media (max-width: 580px) {
+    font-size: 18px;
+  }
+}
+.about-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 51px;
+  padding-bottom: 72px;
+
+  @media (max-width: 580px) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-top: 31px;
+    padding-bottom: 42px;
+  }
+}
+.about-panel-item {
+  text-align: center;
+  cursor: pointer;
+
+  &:hover > svg {
+    stroke: $basic-hover
+  }
+
+  &:hover > .about-panel-item__header {
+    color: $basic-hover
+  }
+
+  @media (max-width: 580px) {
+    flex: 1 1 80px;
+  }
+}
+.about-panel-item svg {
+  stroke: #cfaa6b;
+  transition: stroke .4s;
+}
+.about-panel-item__header {
+  font-size: 16px;
+  color: $basic-gold;
+  transition: color .4s;
+}
+.about-info-blocks {
+  overflow: hidden;
+  min-height: 122px;
+}
+.about-info-blocks-item {
+  color: $basic-black;
+  font-size: 16px;
+  text-align: center;
+  display: none;
+  animation-name: FadeIn;
+  animation-fill-mode: forwards;
+  animation-duration: .7s;
+
+  &--active {
+    display: block;
+  }
+}
+@keyframes FadeIn {
+  from {transform: translate(100%)}
+  to {transform: translate(0%)}
+}

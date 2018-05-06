@@ -1,0 +1,87 @@
+.form {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  @media (max-width: 765px) {
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+.input-wrapper {
+  position: relative;
+  flex: 0 1 240px;
+
+  @media (max-width: 765px) {
+    flex: 1 1 auto;
+    margin-bottom: 50px;
+  }
+}
+.form-input {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  text-transform: uppercase;
+  border: 2px solid $basic-border-grey;
+  cursor: pointer;
+  z-index: 50;
+
+  &:focus {
+    border: 1px solid $basic-border-grey;
+    outline: none;
+  }
+
+  &:hover {
+    border: 1px solid $basic-border-grey;
+    outline: none;
+  }
+}
+.error {
+  border: 3px solid $basic-hover;
+}
+.valid {
+  border: 3px solid $basic-gold;
+}
+.input-error-msg {
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  padding-top: 10px;
+  text-align: center;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  color: $basic-hover;
+  background-color: $basic-white;
+  animation-name: RollIn;
+  animation-fill-mode: forwards;
+  animation-duration: .3s;
+  z-index: 10;
+}
+.input-descr-msg {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  width: 100%;
+  padding-bottom: 10px;
+  text-align: center;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  animation-name: RollInDescr;
+  animation-fill-mode: forwards;
+  animation-duration: .3s;
+  z-index: 10;
+
+}
+@keyframes RollIn {
+  from {top: 50%}
+  to {top: 100%}
+}
+@keyframes RollInDescr {
+  from {bottom: 50%}
+  to {bottom: 100%}
+}

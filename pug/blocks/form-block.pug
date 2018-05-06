@@ -1,0 +1,19 @@
+form.page-main-form.form
+    div.input-wrapper
+        div.input-descr-msg
+            span Имя Фамилия
+        div.input-error-msg
+            span Введите данные в формате: 'Имя Фамилия'
+        input(type='text', name='name', placeholder='Имя Фамилия', required).form-input.form-input--name
+    div.input-wrapper
+        div.input-descr-msg
+            span Телефон
+        div.input-error-msg
+            span Данные должны быть введены в формате: "921 123 4567"
+        input(type='phone', name='phone', placeholder='123 456 7890', required).form-input.form-input--phone
+    div.input-wrapper
+        div.input-descr-msg
+            span E-mail
+        div.input-error-msg
+            span Данные должные быть введены в формате: 'example@gmail.com'
+        input(type='text', name='mail', placeholder='E-mail', required).form-input.form-input--mail

@@ -1,0 +1,14 @@
+doctype html
+html
+    include blocks/head-block
+    body.page
+        include blocks/preloader-block
+        include blocks/header-block
+        main.page-main
+            div.container
+                include blocks/form-block
+                include blocks/info-block
+                include blocks/page-form-submit-btn-block
+    script(src='js/formValidation.js')
+    script(src='js/infoPanel.js')
+    script(src='js/preloader.js')
